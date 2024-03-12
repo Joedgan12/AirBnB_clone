@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines the City class."""
+"""Defines City class."""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Represent a city.
+    """Represent city.
 
     Attributes:
         state_id (str): The state id.
