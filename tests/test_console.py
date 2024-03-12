@@ -22,7 +22,7 @@ from unittest.mock import patch
 
 
 class TestHBNBCommand_prompting(unittest.TestCase):
-    """Unittests for testing prompting of the HBNB command interpreter."""
+    """Unittests for testing prompt of HBNB command interpreter."""
 
     def test_prompt_string(self):
         self.assertEqual("(hbnb) ", HBNBCommand.prompt)
@@ -34,10 +34,10 @@ class TestHBNBCommand_prompting(unittest.TestCase):
 
 
 class TestHBNBCommand_help(unittest.TestCase):
-    """Unittests for testing help messages of the HBNB command interpreter."""
+    """Unittests for testing help messages of HBNB command interpreter."""
 
     def test_help_quit(self):
-        h = "Quit command to exit the program."
+        h = "Quit command to exit  program."
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help quit"))
             self.assertEqual(h, output.getvalue().strip())
@@ -106,7 +106,7 @@ class TestHBNBCommand_help(unittest.TestCase):
 
 
 class TestHBNBCommand_exit(unittest.TestCase):
-    """Unittests for testing exiting from the HBNB command interpreter."""
+    """Unittests for testing exiting from HBNB command interpreter."""
 
     def test_quit_exits(self):
         with patch("sys.stdout", new=StringIO()) as output:
@@ -200,7 +200,7 @@ class TestHBNBCommand_create(unittest.TestCase):
 
 
 class TestHBNBCommand_show(unittest.TestCase):
-    """Unittests for testing show from the HBNB command interpreter"""
+    """Unittests for testing show from HBNB command interpreter"""
 
     @classmethod
     def setUp(self):
@@ -288,7 +288,7 @@ class TestHBNBCommand_show(unittest.TestCase):
             self.assertEqual(correct, output.getvalue().strip())
 
     def test_show_no_instance_found_space_notation(self):
-        correct = "** no instance found **"
+        correct = "** no instances found **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("show BaseModel 1"))
             self.assertEqual(correct, output.getvalue().strip())
@@ -542,7 +542,7 @@ class TestHBNBCommand_destroy(unittest.TestCase):
             self.assertEqual(correct, output.getvalue().strip())
 
     def test_destroy_invalid_id_space_notation(self):
-        correct = "** no instance found **"
+        correct = "** no instances found **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("destroy BaseModel 1"))
             self.assertEqual(correct, output.getvalue().strip())
@@ -566,7 +566,7 @@ class TestHBNBCommand_destroy(unittest.TestCase):
             self.assertEqual(correct, output.getvalue().strip())
 
     def test_destroy_invalid_id_dot_notation(self):
-        correct = "** no instance found **"
+        correct = "** no instances found **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("BaseModel.destroy(1)"))
             self.assertEqual(correct, output.getvalue().strip())
@@ -853,7 +853,7 @@ class TestHBNBCommand_all(unittest.TestCase):
 
 
 class TestHBNBCommand_update(unittest.TestCase):
-    """Unittests for testing update from the HBNB command interpreter."""
+    """Unittests for testing update from HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
@@ -1502,7 +1502,7 @@ class TestHBNBCommand_update(unittest.TestCase):
 
 
 class TestHBNBCommand_count(unittest.TestCase):
-    """Unittests for testing count method of HBNB comand interpreter."""
+    """Unittests for testing count method of HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
